@@ -1,18 +1,91 @@
 <head>
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Sentimental Analysis</title>
+    
+    <style>
+        /* Reset default margin and padding for all elements */
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        /* Apply background color to the entire page */
+        body {
+        background-color: #f0f0f0; /* Replace with your desired background color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        }
+
+        /* Style the form container */
+        .App {
+        background-color: #fff; /* Replace with your desired background color */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Center-align the form elements */
+        .App-header {
+        text-align: center;
+        }
+
+        /* Style the input boxes */
+        .input-box {
+        margin-bottom: 20px;
+        }
+
+        .input-box input[type="text"],
+        .input-box input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        }
+
+        /* Style the submit button */
+        .button {
+        text-align: center;
+        }
+
+        .button input[type="Submit"] {
+        background-color: #007bff; /* Replace with your desired button color */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        }
+
+        .button input[type="Submit"]:hover {
+        background-color: #0056b3; /* Replace with a darker shade if desired */
+        }
+
+    </style>
 
 <body>
     <div class="App">
         <header class="App-header">
-            <img src="{{ url_for('static', filename='Octocat.png') }}" class="App-logo" alt="logo" />
-            <p>
-                GitHub Codespaces <span class="heart">♥️</span> Flask
-            </p>
-            <p class="small">
-                Edit <code>templates/index.html</code> and refresh to see your changes!
-            </p>
+            <form action="#">
+              
+                <div class="input-box">
+                  <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                  <input type="file" placeholder="Uploaded you'r CSV " required>
+                </div>
+                
+                <div class="input-box button">
+                  <input type="Submit" value="Register Now">
+                </div>
+               
+              </form>
+            
+          
         </header>
+        
     </div>
 </body>
 
